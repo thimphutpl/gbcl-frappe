@@ -773,6 +773,7 @@ class BaseDocument:
 		cancelled_links = []
 
 		for df in self.meta.get_link_fields() + self.meta.get("fields", {"fieldtype": ("=", "Dynamic Link")}):
+			
 			docname = self.get(df.fieldname)
 
 			if docname:
@@ -808,6 +809,7 @@ class BaseDocument:
 						]
 
 						# don't cache if fetching other values too
+						# frappe.msgprint(f"{doctype} {docname} {values_to_fetch}"))
 						values = frappe.db.get_value(doctype, docname, values_to_fetch, as_dict=True)
 
 				if getattr(meta, "issingle", 0):
