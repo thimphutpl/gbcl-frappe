@@ -145,6 +145,8 @@ class User(Document):
 		"""set name as Email Address"""
 		if self.get("is_admin") or self.get("is_guest"):
 			self.name = self.first_name
+		elif not self.email:
+			frappe.throw(_("Please select the company email in the Preferred Contact Email field"))	
 		else:
 			self.email = self.email.strip().lower()
 			self.name = self.email

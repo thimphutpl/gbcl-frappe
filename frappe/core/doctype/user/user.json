@@ -130,11 +130,11 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "no_copy": 1,
    "oldfieldname": "email",
    "oldfieldtype": "Data",
    "options": "Email",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "first_name",
@@ -741,8 +741,7 @@
    "description": "Redirect to the selected app after login",
    "fieldname": "default_app",
    "fieldtype": "Select",
-   "label": "Default App",
-   "options": ""
+   "label": "Default App"
   },
   {
    "collapsible": 1,
@@ -871,7 +870,7 @@
    "link_fieldname": "user"
   }
  ],
- "modified": "2024-09-27 11:41:13.336662",
+ "modified": "2025-08-01 14:36:30.488190",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
